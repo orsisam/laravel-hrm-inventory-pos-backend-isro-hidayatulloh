@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DepartmentController;
 use App\Http\Controllers\Api\DesignationController;
 use App\Http\Controllers\Api\HolidayController;
+use App\Http\Controllers\Api\LeaveController;
 use App\Http\Controllers\Api\LeaveTypeController;
 use App\Http\Controllers\Api\RoleController;
 use App\Models\BasicSalary;
@@ -25,5 +26,6 @@ Route::name('api.')->group(function () {
         Route::apiResource('/basic-salaries', BasicSalary::class);
         Route::apiResource('/holdays', HolidayController::class);
         Route::apiResource('/leave-types', LeaveTypeController::class);
+        Route::apiResource('/leaves', LeaveController::class);
     });
 });

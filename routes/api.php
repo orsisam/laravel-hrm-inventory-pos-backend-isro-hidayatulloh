@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AttendanceController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DepartmentController;
 use App\Http\Controllers\Api\DesignationController;
@@ -27,5 +28,6 @@ Route::name('api.')->group(function () {
         Route::apiResource('/holdays', HolidayController::class);
         Route::apiResource('/leave-types', LeaveTypeController::class);
         Route::apiResource('/leaves', LeaveController::class);
+        Route::apiResource('/attendances', AttendanceController::class);
     });
 });

@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\DesignationController;
 use App\Http\Controllers\Api\HolidayController;
 use App\Http\Controllers\Api\LeaveController;
 use App\Http\Controllers\Api\LeaveTypeController;
+use App\Http\Controllers\Api\PayrollController;
 use App\Http\Controllers\Api\RoleController;
 use App\Models\BasicSalary;
 use Illuminate\Http\Request;
@@ -29,5 +30,6 @@ Route::name('api.')->group(function () {
         Route::apiResource('/leave-types', LeaveTypeController::class);
         Route::apiResource('/leaves', LeaveController::class);
         Route::apiResource('/attendances', AttendanceController::class);
+        Route::apiResource('/payrolls', PayrollController::class);
     });
 });

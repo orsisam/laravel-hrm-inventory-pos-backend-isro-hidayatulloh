@@ -28,6 +28,12 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123456'),
         ]);
 
+        User::factory()->create([
+            'name' => 'admin3',
+            'email' => 'admin3@example.com',
+            'password' => Hash::make('123456'),
+        ]);
+
         $this->call([
             CompanySeeder::class,
             RoleSeeder::class,
@@ -41,6 +47,7 @@ class DatabaseSeeder extends Seeder
             HolidaySeeder::class,
             LeaveTypeSeeder::class,
             LeaveSeeder::class,
+            PayrollSeeder::class,
         ]);
     }
 }
